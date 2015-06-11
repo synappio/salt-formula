@@ -10,8 +10,6 @@ salt-syndic:
 {% endif %}
   service:
     - running
-    - require:
-      - service: {{ salt_settings.syndic_service }}
     - watch:
 {% if salt_settings.install_packages %}
       - pkg: salt-master
